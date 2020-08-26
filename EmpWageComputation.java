@@ -48,17 +48,19 @@ void checkPartOrFullTime()
 void dailyWage()
 {
 
-         if(check==1)
-         {
+	//         if(check==1)
+         switch(check){
+	case 1:
 		totalSalary=fullDayHr*WagePerHr;
                System.out.println("Your salary "+totalSalary);
-         }
-         else if(check==0){
+         break;
+         case 0:
 		 totalSalary=halfDayHr*WagePerHr;
                System.out.println("YOur Salary "+totalSalary);
-         }else{
+         break;
+	default:
 		System.out.println("YOur Salary "+totalSalary);
-
+	
 	}
 
 }
