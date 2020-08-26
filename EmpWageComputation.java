@@ -51,15 +51,15 @@ void dailyWage()
 	//         if(check==1)
          switch(check){
 	case 1:
-		totalSalary=fullDayHr*WagePerHr;
-               System.out.println("Your salary "+totalSalary);
+		totalSalary=totalSalary+(fullDayHr*WagePerHr);
+               System.out.println("Your total salary "+totalSalary);
          break;
          case 0:
-		 totalSalary=halfDayHr*WagePerHr;
-               System.out.println("YOur Salary "+totalSalary);
+		 totalSalary=totalSalary+(halfDayHr*WagePerHr);
+               System.out.println("Your total Salary "+totalSalary);
          break;
 	default:
-		System.out.println("YOur Salary "+totalSalary);
+		System.out.println("Your total Salary "+totalSalary);
 	
 	}
 
@@ -73,21 +73,15 @@ class EmpWageComputation {
 	public static void main(String[] args)
 	{
 		Emp obj=new Emp();
+		for(int i=1;i<=20;i++)
+		{
+		System.out.println("Day "+i);
+	//	Emp obj=new Emp();
 		obj.random();
 		obj.isPresentOrAbsent();
 		obj.checkPartOrFullTime();
 		obj.dailyWage();
-//		int IsPresent=1;
-		//double randomV=Math.floor(Math.random()*10)%2;
-//		int ch
-		//if(randomV==IsPresent)
-		{
-		//	System.out.println("present");
 		}
-		//else{
-		//	System.out.println("absent");
-	//	}
-
 	}
 
 }
