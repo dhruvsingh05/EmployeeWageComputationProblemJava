@@ -1,6 +1,6 @@
 class Emp{
 public int isPresent=1,WagePerHr=20,fullDayHr=8,halfDayHr=4,checkPresent,totalSalary=0;
-public int check,checkFullTime=1;
+public int check,checkFullTime=1,totalTime=0;
 public double randomV;
 
 void random()
@@ -30,10 +30,12 @@ void checkPartOrFullTime()
 	random();
          if(randomV==checkFullTime)
          {
+		totalTime=totalTime+8;
 		check=1;
 		System.out.println("Full Time");
 	}else{
 	check=0;
+		 totalTime=totalTime+4;
 		System.out.println("Part Time");
 	}
 	}
@@ -72,15 +74,22 @@ void dailyWage()
 class EmpWageComputation {
 	public static void main(String[] args)
 	{
+	//public int totalTime=0;
+
 		Emp obj=new Emp();
 		for(int i=1;i<=20;i++)
 		{
+		  if(obj.totalTime<=100)
+                {
 		System.out.println("Day "+i);
 	//	Emp obj=new Emp();
 		obj.random();
 		obj.isPresentOrAbsent();
 		obj.checkPartOrFullTime();
 		obj.dailyWage();
+		}else{
+		break;
+		}
 		}
 	}
 
